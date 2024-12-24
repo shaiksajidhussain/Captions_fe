@@ -1,0 +1,164 @@
+.upload-container {
+  padding: 32px;
+  max-width: 800px;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+.upload-title {
+  color: #1a73e8;
+  font-size: 2.4rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.upload-card {
+  background: white;
+  padding: 32px;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.upload-area {
+  border: 2px dashed #1a73e8;
+  border-radius: 12px;
+  padding: 40px;
+  text-align: center;
+  margin-bottom: 24px;
+  background: #f8f9ff;
+  transition: all 0.3s ease;
+}
+
+.upload-area:hover {
+  background: #f0f4ff;
+}
+
+.file-input {
+  display: none;
+}
+
+.file-label {
+  cursor: pointer;
+  color: #1a73e8;
+  font-weight: 500;
+  font-size: 1.1rem;
+  display: block;
+}
+
+.file-label:hover {
+  color: #1557b0;
+}
+
+.file-info {
+  background: #f8f9fa;
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+}
+
+.file-info p {
+  margin: 8px 0;
+  color: #1e293b;
+}
+
+.progress-container {
+  margin: 24px 0;
+}
+
+.progress-bar {
+  height: 8px;
+  background: #e9ecef;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #1a73e8, #34a853);
+  transition: width 0.3s ease;
+}
+
+.progress-text {
+  font-size: 0.9rem;
+  color: #1e293b;
+  font-weight: 500;
+}
+
+.upload-status {
+  padding: 12px;
+  border-radius: 8px;
+  margin: 16px 0;
+  font-weight: 500;
+}
+
+.upload-status.success {
+  background: #ecfdf5;
+  color: #059669;
+}
+
+.upload-status.error {
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+.upload-button {
+  width: 100%;
+  padding: 12px 24px;
+  background: #1a73e8;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.upload-button:hover:not(:disabled) {
+  background: #1557b0;
+  transform: translateY(-1px);
+}
+
+.upload-button:disabled {
+  background: #e9ecef;
+  cursor: not-allowed;
+}
+
+/* Animation for upload status */
+@keyframes slideIn {
+  from {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.upload-status {
+  animation: slideIn 0.3s ease;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .upload-container {
+    padding: 16px;
+  }
+
+  .upload-title {
+    font-size: 2rem;
+    margin-bottom: 24px;
+  }
+
+  .upload-card {
+    padding: 20px;
+  }
+
+  .upload-area {
+    padding: 24px;
+  }
+} 

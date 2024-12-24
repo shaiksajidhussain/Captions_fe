@@ -1,0 +1,40 @@
+.video-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.video-js {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
+}
+
+/* Ensure captions are visible with proper contrast */
+.video-js .vjs-text-track-display {
+  pointer-events: none;
+}
+
+.video-js .vjs-text-track-cue {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 0.2em 0.5em;
+  border-radius: 2px;
+}
+
+/* Style the actual caption text */
+.video-js .vjs-text-track-cue > div {
+  color: white !important;
+  font-family: Arial, sans-serif;
+  font-size: 1.2em;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+  line-height: 1.4;
+  white-space: pre-wrap;
+}
+
+/* Ensure captions container is properly positioned */
+.video-js .vjs-text-track-display > div > div > div {
+  background: rgba(0, 0, 0, 0.5) !important;
+  padding: 0.2em 0.5em !important;
+  margin: 0 auto;
+  max-width: 90%;
+}
